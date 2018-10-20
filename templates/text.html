@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>解忧包子铺</title>
+	<style>
+		*{
+	margin: 0;
+	padding: 0;
+	}
+	body{
+		background-image: url("http://i.gtimg.cn/qzone/space_item/orig/5/97349_bg1.png");
+		font-family: punctuation,"PingFangSC-Regular","Microsoft Yahei","sans-serif";
+		height: 1000px;
+	}
+	.topInfo{
+		width: 100%;
+		height: 300px;
+		background-repeat: no-repeat;
+		/*background-position: -276px 42px;*/
+		/*margin-top: 41px;*/
+		background-position:-275px top;
+		background-attachment: scroll;
+		/*background-image: url("http://i.gtimg.cn/qzone/space_item/orig/5/97349_top.jpg");*/
+		background-image: url("https://i.gtimg.cn/qzone/space_item/orig/4/102500_top.jpg");
+		position: relative;
+	}
+	.edit{
+		position: absolute;
+		left: 417px;
+		/*width: 100%;*/
+		height: 18px;
+		background:#54B3E3;
+		color: white;
+		font-size: 14px;
+		display: none;
+	}
+	.zoneName{
+		position: absolute;
+		top: 20px;
+		left: 185px;
+		color: white;
+		width: 280px;
+		height: 60px;
+	}
+	.zoneName h2{
+		font-size: 28px;
+		font-weight: normal;
+	}
+	.zoneName p{
+		font-size: 14px;
+		margin-top: 3px;
+	}
+	.support{
+		width: 58px;
+		height: 33px;
+		position: absolute;
+		right: 183px;
+		top: 50px;
+		background-color: rgba(0,0,0,.4);
+		border-radius: 18px;
+		color: white;
+		line-height: 30px;
+		cursor: pointer;
+	}
+
+	.support img{
+		width: 18px;
+		height: 18px;
+		margin-top: 7px;
+		margin-left: 13px;
+	}
+	.num{
+		margin-top: -33px;
+		width: 18px;
+		height: 18px;
+		margin-left: 40px;
+		display: block;
+		margin-bottom:2px;
+		cursor: pointer;
+	}
+	.tips{
+		width: 60px;
+		height: 20px;
+		font-size: 12px;
+		background-color: white;
+		color: black;
+		text-align: center;
+		line-height: 20px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		display: none;
+	}
+	.top_bottom{
+		width: 100%;
+		height: 50px;
+		background-image: url("http://i.gtimg.cn/qzone/space_item/orig/5/97349_menu_bg.png");
+		position: absolute;
+		bottom: 0;
+	}
+
+	.container{
+		width: 980px;
+		margin: 0 auto;
+		height: 100%;
+		line-height: 50px;
+	}
+	.top_bottom ul.section{
+		list-style: none;
+		margin-left: 165px;
+		float: left;
+	}
+	.top_bottom ul.section li{
+		float: left;
+		/*margin-right: 28px;*/
+		font-size: 16px;
+		color: #eee;
+		font-weight: normal;
+		/*font-family: Lucida Console, Monaco, Courier New, mono, monospace;*/
+		font-family: Tahoma, Helvetica, Arial, sans-serif;
+		cursor: pointer;
+	}
+	.top_bottom ul.section li:hover{
+		color: #36648B;
+	}
+	ul.section li:nth-child(1){
+		margin-right: 20px
+	}
+	ul.section li:nth-child(2){
+		margin-right: 20px
+	}
+	ul.section li:nth-child(3){
+		margin-right: 15px
+	}
+	ul.section li:nth-child(4){
+		margin-right: 20px
+	}
+	ul.section li:nth-child(5){
+		margin-right: 17px
+	}
+	ul.section li:nth-child(6){
+		margin-right: 15px
+	}
+	ul.section li:nth-child(7){
+		margin-right: 18px
+	}
+
+
+	.mainframe{
+		width: 900px;
+		/*height: 2703px;*/
+		margin:20px auto;
+		background-color:#24639D;
+		color:#EDEFF0;
+		font-family: Tahoma, Helvetica, Arial, sans-serif;
+	}
+	.title{
+		width: 858px;
+		height: 52px;
+		margin:0 auto;
+		line-height: 52px;
+		font-family: 微软雅黑,Tohoma;
+		font-size: 14px;
+		color: #2b9de6;
+		/*border-color: #1f70bb;*/
+		border-bottom: 2px solid #1f70bb;
+	}
+	.title:hover{
+		color:#70CCFF;
+	}
+	.message{
+		width: 858px;
+		height: 35px;
+		margin: 0 auto;
+		line-height: 35px;
+		color: #eee;
+		border-bottom: 2px solid #1f70bb;
+		font-family:微软雅黑, Tohoma;
+	}
+	.info{
+		width: 858px;
+		height: 140px;
+		color: #EDEFF0;
+		margin: 0 auto;
+		line-height: 40px;
+		border-bottom: 2px solid #1f70bb;
+		font-size: 12px;
+	}
+		.name{
+		width: 858px;
+		height: 35px;
+		/*word-break: break-all;*/
+		margin: 0 auto;
+		size: 12px;
+		margin-left: 20px;
+		padding: 0px;
+		border: 2px solid #1f70bb;
+		border-top: 0px;
+		/*background-color: #e2e2e2;*/
+		color: burlywood;
+		text-indent: 2px;
+		font-size: 14px;
+	}
+	.content{
+		width: 858px;
+		height: 100px;
+		word-break: break-all;
+		/*margin: 0 auto;*/
+		margin-left: 20px;
+		/*padding: 50px;*/
+		border: 2px solid #1f70bb;
+		border-top: 0px;
+		/*background-color: #e2e2e2;*/
+		color: burlywood;
+		text-indent: 2px;
+		font-size: 14px;
+	}
+	.subbtn{
+		width: 72px;
+		height: 28px;
+		line-height: 28px;
+		font-size: 14px;
+		border-radius: 2px;
+		background-color: #46B2EF;
+		color: #FFFFFF;
+		border: 1px solid #3686B3;
+		cursor:pointer;
+		margin-left: 20px;
+		margin-bottom: 50px;
+	}
+	.subbtn:hover{
+		background-color: #1a88cf;
+	}
+	.numofmessage{
+		width: 858px;
+		height: 20px;
+		color: #EDEFF0;
+		margin: 0 auto;
+		line-height: 20px;
+		border-bottom: 2px solid #1f70bb;
+		font-family:微软雅黑, Tohoma;
+	}
+	.msgFrame{
+		width: 858px;
+		height: 170px;
+		margin: 0 auto;
+	}
+	.content_1{
+		width: 858px;
+		height: 170px;
+		color: #EDEFF0;
+		margin: 0 auto;
+		border-bottom: 2px solid #1f70bb;
+	}
+	a{
+		color: #70CCFF;
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	.mainInfo{
+		width: 766px;
+		height: 143px;
+		float: right;
+		margin-top: 20px;
+	}
+	.userId{
+	   width: 100%;
+	   height: 20px;
+	   font-size: 12px;
+	}
+	.conInfo{
+		width: 100%;
+		height: 100px;
+		margin-top: 12px;
+		color: #8AB8E3;
+		font-size: 16px;
+	}
+	.time{
+	   width: 100%;
+	   height: 20px;
+	   font-size: 12px;
+	   margin-bottom: 20px;
+	   color: #8AB8E3;
+	}
+
+	</style>
+</head>
+<body>
+
+    <div class="topInfo">
+        <span class="edit">编辑</span>
+    	<div class="zoneName">
+    		<h2>解忧包子铺的空间</h2>
+    		<p>知我者，谓我心忧。不知我者，谓我何求。</p>
+    	</div>
+    	<div class="top_bottom">
+    	   <div class="container">
+    	   	  <ul class="section">
+    			<!--<li>主页</li>-->
+    			<li>个人信息</li>
+    			<li>相册</li>
+    			<li>留言板</li>
+    			<!--<li>说说</li>-->
+    		</ul>
+    	   </div>
+    	</div>
+    </div>
+    <!-- 下面实现留言板功能 -->
+    <div class="mainframe">
+    	<div class="title">留言板</div>
+    	<div class="message">主人寄语</div>
+    	<div class="info">
+    		这是主人留下的寄语~
+    	</div>
+        <form method="post">
+			<input class="name" type="text" name="name" value="姓名">
+			<input class="content" type="text" name="message" value="留言内容" >
+			<input class="subbtn" type="submit" name="submit" value="发表">
+			{% csrf_token %}
+        </form>
+    	<div class="numofmessage">留言</div>
+    	<!-- 下面是留言区 -->
+		{% for liu in liuyans %}
+			<ul style="list-style-type: none">
+				<li>
+					<div class="msgFrame">
+						<div class="content_1">
+							 <div class="mainInfo">
+								<div class="userId">{{ liu.name }}</div>
+									<div class="conInfo">
+										{{ liu.message }}
+									</div>
+							<div class="time">{{ liu.add_time | timesince }}</div>
+						</div>
+					 </div>
+				</li>
+			</ul>
+		{% endfor %}
+    </div>
+</body>
+<!--<script type="text/javascript" src="js/jquery.js"></script>-->
+<!--<script type="text/javascript">-->
+   <!--$(".zoneName").hover(function(){-->
+   	   <!--$(".edit").show();-->
+   <!--},function(){-->
+   	   <!--$(".edit").delay(500).hide(0);//延时执行-->
+   <!--})-->
+   <!--//鼠标响应事件-->
+   <!--$(".support").mouseover(function(e){-->
+   	   <!--var left=e.pageX;-->
+   	   <!--var top=e.pageY;-->
+   	   <!--top=top-41;//这里是因为这个元素的父元素使用了margin-top属性，使得top值偏移了41像素。-->
+   	   <!--top=top+25;//加上鼠标自己的高度-->
+   	   <!--console.log(left+"px"+"   top:"+top)-->
+   	   <!--$(".tips").css({"left":left+"px","top":top+"px"});-->
+   	   <!--// $(".tips").delay(800).show(0);加了延时执行后会使得鼠标响应事件不灵敏-->
+   	   <!--// $(".tips").show("slow");-->
+   	   <!--$(".tips").fadeIn();-->
+   <!--})-->
+
+   <!--$(".support").mouseleave(function(){-->
+   	   <!--console.log("leave");-->
+   	    <!--$(".tips").fadeOut();-->
+   <!--})-->
+
+<!--</script>-->
+</html>
